@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:mzayaapp/features/forget_password/forget_password_screen.dart';
 import 'package:mzayaapp/features/signup/signup_screen.dart';
 import 'package:mzayaapp/utils/constants/colors.dart';
 import 'package:mzayaapp/utils/constants/sizes.dart';
@@ -52,7 +53,7 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(ForgetPasswordScreen()),
                   child: const Text(MazayaText.forgetPassword),
                 ),
               ],

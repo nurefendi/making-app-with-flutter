@@ -61,4 +61,7 @@ class MazayaText {
 
   static const String man = "Man";
   static const String woman = "Woman";
+
+  static const String submit = "Submit";
+  static const String done = "Done";
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mzayaapp/features/signup/signup_term_of_condition.dart';
+import 'package:mzayaapp/features/verify_email/verify_email_screen.dart';
 import 'package:mzayaapp/utils/constants/colors.dart';
 import 'package:mzayaapp/utils/constants/sizes.dart';
 import 'package:mzayaapp/utils/constants/text_string.dart';
@@ -123,7 +125,7 @@ class SignUpForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () => Get.to(() => VerifyEmailScreen()),
               child: Text(MazayaText.createAccount),
             ),
           ),
