@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:mzayaapp/features/forget_password/forget_password_screen.dart';
 import 'package:mzayaapp/features/signup/signup_screen.dart';
+import 'package:mzayaapp/navigation_menu.dart';
 import 'package:mzayaapp/utils/constants/colors.dart';
 import 'package:mzayaapp/utils/constants/sizes.dart';
 import 'package:mzayaapp/utils/constants/text_string.dart';
@@ -63,7 +64,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(NavigationMenu()),
                 child: Text(MazayaText.signIn),
               ),
             ),
