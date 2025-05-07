@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mzayaapp/common/widget/appbar.dart';
+import 'package:mzayaapp/common/widget/cart_counter_icon.dart';
+import 'package:mzayaapp/common/widget/primary_header_container.dart';
 import 'package:mzayaapp/utils/constants/colors.dart';
+
+import 'home_appbar.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,47 +13,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(children: [CircularContainer()]),
-      ),
-    );
-  }
-}
-
-class CircularContainer extends StatelessWidget {
-  const CircularContainer({
-    super.key,
-    this.width = 400,
-    this.height = 400,
-    this.radius = 400,
-    this.padding = 0,
-    this.backgroundColor = MazayaColors.white,
-    this.child,
-  });
-
-  final double? width;
-  final double? height;
-  final double radius;
-  final double padding;
-  final Widget? child;
-  final Color backgroundColor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: MazayaColors.primary,
-      padding: EdgeInsets.all(0),
-      child: Stack(
-        children: [
-          Container(
-            width: width,
-            height: height,
-            padding: EdgeInsets.all(padding),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(radius),
-              color: backgroundColor,
+        child: Column(
+          children: [
+            PrimaryHeaderContainer(
+              child: Column(
+                children: [
+                  MazayaAppBar(
+                    title: HomeAppBar(),
+                    actions: [
+                      CartCounterIcon(onPressed: (){}, iconColor: MazayaColors.white,),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
